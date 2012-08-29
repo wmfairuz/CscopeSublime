@@ -94,10 +94,10 @@ class CscopeCommand(sublime_plugin.TextCommand):
     def match_output_line(self, line, mode):
         match = None
 
-        if mode == 0:
-            match = re.match('(\S+?)\s+?(<global>)?\s+(\d+)\s+(.+)', line)
-        elif mode == 1:
-            match = re.match('(\S+?)\s+?\S+\s+(\d+)\s+(.+)', line)
+        #if mode == 0:
+        #    match = re.match('(\S+?)\s+?(<global>)?\s+(\d+)\s+(.+)', line)
+        #elif mode == 1:
+        match = re.match('(\S+?)\s+?\S+\s+(\d+)\s+(.+)', line)
  
         if match != None:
             if match.lastindex == 4:
